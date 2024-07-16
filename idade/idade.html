@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <Header>
+        <h1>Verificador de Idade</h1>
+    </Header>
+        <section>
+            <div class="ano">
+            <label for="idata">Ano de Nascimento:</label>
+            <input type="number" name="data" id="idata" min="1900" max="2024">
+            </div>
+            <div>
+            <p>Sexo:
+            <input type="radio" name="sexo" id="Mas" value="M" checked>
+            <label for="Mas">Masculino</label>
+            <input type="radio" name="sexo" id="Fem" value="F">
+            <label for="Fem">Feminino</label>
+        </p>
+            <input type="submit" value="Verificar">
+            </div>
+            <p>Preencha os dados acima para ver o resultado!</p>
+        </section>
+        <footer>
+            @IvinySantos
+        </footer>
+        <script src="VR.js"></script>
+</body>
+</html>
