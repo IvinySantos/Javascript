@@ -4,12 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verificador de Idade</title>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <Header>
@@ -18,7 +13,7 @@
         <section>
             <div class="ano">
             <label for="idata">Ano de Nascimento:</label>
-            <input type="number" name="data" id="idata" min="1976" max="2024">
+            <input type="number" name="data" id="idata">
             </div>
             <div>
             <p>Sexo:
@@ -27,26 +22,13 @@
             <input type="radio" name="sexo" id="Fem" value="F">
             <label for="Fem">Feminino</label>
         </p>
-            <input type="submit" value="Verificar" onclick="calcular()">
+            <input type="submit" value="Verificar" onclick="verificar()">
             </div>
-            <p>Preencha os dados acima para ver o resultado!</p>
+            <p id="res">Preencha os dados acima para ver o resultado!</p>
         </section>
         <footer>
-            @IvinySantos
+            <p>&copy; IvinySantos</p>
         </footer>
-
-    <script>
-        function calcular() {
-            var M = window.document.querySelector('Mas')
-            var F = window.document.querySelector('Fem')
-            var ano = window.document.querySelector('#idata')
-            if (ano + M) {
-                console.log('Detectamo Homem')
-            } else {
-                console.log('Detectamos Mulher')
-            }
-            
-        }
-    </script>
+        <script src="script.js"></script>
 </body>
 </html>
