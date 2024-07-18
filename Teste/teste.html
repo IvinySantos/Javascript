@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient( to top, rgba(1, 100, 1, 0.39), rgba(0, 128, 0, 0.61), rgba(0, 128, 0, 0.795), rgb(0, 128, 0));
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+        }
+
+        #caixa {
+            background-image: linear-gradient(to bottom, rgba(0, 0, 255, 0.603), rgba(0, 102, 255, 0.466), rgba(255, 255, 0, 0.671), rgb(255, 166, 0));
+            border-radius: 800px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.76);
+            width: 500px;
+            height: 100px;
+            padding: 40px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .c1 {
+            border-radius: 5px;
+        }
+
+        .c2 {
+            border-radius: 5px;
+        }
+
+        h1 {
+            text-shadow: 6px 4px 6px rgba(0, 0, 0, 0.582);
+            text-align: center;
+        }
+
+        div#cad {
+            text-align: center;
+            padding: 10px;
+        }
+
+        #cad input {
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+        }
+
+        #ivi {
+            text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.322);
+            text-decoration: none;
+            color: black; 
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Cadastrar</h1>
+    <section>
+        
+        <div id="caixa">
+            <p id="c1"><label for="inome">Nome:</label>
+            <input type="text" name="nome" id="inome" class="c1" placeholder="preencha o seu nome" autocomplete="off"></p>
+            <p><label for="isenha">Senha:</label>
+            <input type="password" name="nome" id="isenha" class="c2" placeholder="coloque sua senha"></p>
+            <p id="res"></p>
+        </div>
+        <div id="cad">
+            <input type="submit" value="Cadastrar" id="cadd" onclick="verificar()">
+        </div>
+    </section>
+    <footer><a href="https://www.instagram.com/iviny_wolverine/" target="_blank" id="ivi">@IvinySantos</a></footer>
+    
+    <script>
+        function verificar() {
+        var nome = window.document.querySelector('#inome')
+        var res = window.document.querySelector('#res')
+        res.style.textAlign = 'center'
+        res.innerHTML = `Otário, Alguém  já roubou este nome (${nome.value}) , tente novamente!`        
+        }
+    </script>
+</body>
+</html>
