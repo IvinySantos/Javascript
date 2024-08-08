@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgba(0, 0, 0, 0.753);
+        }
+
+        .caixa {
+         background-color: rgb(110, 131, 16);
+         margin: auto;
+         height: 200px;
+         width: 200px;
+         border-radius: 50%;
+         margin-top: 30px;
+        }
+
+        .relogio {
+         
+         text-align: center;
+         padding-top: 60px;
+         
+         color: aliceblue;
+         
+         font-size: 50px;
+         
+         
+        }
+    </style>
+</head>
+<body>
+    <div class="caixa">
+        <div class="relogio">
+
+        </div>
+    </div>
+    <script>
+        function mostrarHoraAtual(){
+        let relogio = document.querySelector(".relogio");
+
+        let data = new Date();
+        let hora = data.getHours();
+        let minuto = data.getMinutes();
+        let segundo = data.getSeconds();
+
+        hora = hora < 10 ? '0' + hora : hora;
+        minuto = minuto < 10 ? '0' + minuto : minuto;
+        segundo = segundo < 10 ? '0' + segundo : segundo;
+
+        relogio.innerHTML = hora + ':' + minuto + ':' + segundo;
+        }
+
+        mostrarHoraAtual();
+        setInterval(()=>{
+            mostrarHoraAtual();
+        }, 1000);
+        
+    </script>
+</body>
+</html>
